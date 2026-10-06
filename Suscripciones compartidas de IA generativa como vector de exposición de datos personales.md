@@ -130,11 +130,7 @@ Los activos expuestos son el contenido introducido por los usuarios, el perfil q
 4. **V4. Persistencia tras la baja.** Cuando el comprador deja de pagar, pierde el acceso, pero su contenido permanece en la cuenta a disposición de los siguientes.
 5. **V5. Control del intermediario.** Quien gestiona las credenciales y el generador de códigos de segundo factor tiene acceso permanente a todo el contenido, y el segundo factor deja de cumplir su función de seguridad.
 
-Estos vectores se amplifican por la agregación. Datos aislados de una misma persona, como un documento bancario, una fotografía de su vivienda y una captura con su correo electrónico, pueden combinarse en un perfil útil para el *phishing* dirigido o la recuperación fraudulenta de otras cuentas.
-
-&#91;embedded content: Figura 1. Ciclo de vida de una cuenta revendida · 6 etapas, 5 vectores de exposición\]
-
-*Figura 1. Ciclo de vida de una cuenta revendida. El intermediario conserva el acceso en todo momento y cada nuevo comprador hereda el contenido de los anteriores. Elaboración propia.*
+Estos vectores se amplifican por la agregación. Datos aislados de una misma persona, como un documento bancario, una fotografía de su vivienda y una captura con su correo electrónico, pueden combinarse en un perfil útil para el *phishing* dirigido o la recuperación fraudulenta de otras cuentas (figura 1).
 
 ## 4. Resultados
 
@@ -146,19 +142,11 @@ En una de las plataformas analizadas, el acceso a ChatGPT se ofrecía por 4,16 �
 
 Los intermediarios anunciaban habitualmente que cada suscripción se compartía entre cuatro y seis usuarios, cifra que variaba según el servicio y el plan. La oferta describía el producto como "planes oficiales de ChatGPT Plus", sin advertir de que el contenido de cada usuario quedaría accesible para los demás.
 
-&#91;image: Catálogo de una plataforma de reventa con ChatGPT a 4,16 € al mes\]
-
-*Figura 2. Catálogo de una plataforma de reventa de suscripciones. El nombre de la plataforma se ha tachado.*
-
 ### 4.2. Un acceso automatizado que neutraliza el segundo factor
 
 Tras la compra, la propia plataforma mostraba al cliente el correo de acceso, la contraseña y un código de verificación en dos pasos que se renovaba cada 30 segundos (figura 3). Cuando el inicio de sesión exigía un código enviado al correo de la cuenta, la plataforma también lo mostraba, con una demora de uno a dos minutos.
 
 Este diseño tiene dos consecuencias. Primera, el intermediario conserva la semilla del generador de códigos y el acceso al buzón asociado, y puede entrar en la cuenta en cualquier momento (vector V5). Segunda, el segundo factor de autenticación, concebido para garantizar que solo el titular accede, se convierte en un mecanismo de distribución del acceso entre desconocidos.
-
-&#91;image: Pantalla de entrega de credenciales y código de verificación en dos pasos\]
-
-*Figura 3. Entrega automatizada de credenciales, código de segundo factor y código de verificación por correo. Los valores se han tachado.*
 
 ### 4.3. Más usuarios de los anunciados
 
@@ -169,10 +157,6 @@ La relación de dispositivos y accesos verificados de algunas cuentas mostraba h
 Una de las cuentas examinadas ocupaba 2,94 GB de los 20 GB de almacenamiento disponibles: 615 archivos (1,71 GB) y 1.586 imágenes (1,23 GB) (figura 4). La biblioteca de archivos e imágenes permite recorrer ese contenido directamente, sin necesidad de abrir conversaciones (vector V2).
 
 Se observó además una diferencia clara entre cuentas recientes, con poco contenido, y cuentas de mayor antigüedad, en las que se acumulaban conversaciones, archivos e imágenes de distintos usuarios. La exposición, por tanto, crece con el tiempo de vida de la cuenta.
-
-&#91;image: Panel de almacenamiento: 2,94 GB de 20 GB usados, 615 archivos y 1.586 imágenes\]
-
-*Figura 4. Panel de almacenamiento de una de las cuentas compartidas analizadas.*
 
 ### 4.5. Tipología de los datos expuestos
 
@@ -195,33 +179,9 @@ La tabla 1 clasifica las categorías de datos observadas según su calificación
 
 El historial de conversaciones revela por sí solo información sensible antes incluso de abrir ningún archivo (figura 5). Los títulos, generados automáticamente a partir del contenido, resumen el tema de cada consulta y son visibles en la barra lateral.
 
-&#91;image: Barra lateral con títulos de conversaciones recientes, parcialmente tachados\]
-
-*Figura 5. Títulos de conversaciones recientes de una cuenta compartida, truncados por los autores.*
-
 Los documentos de salud y financieros son los de mayor gravedad. El informe clínico de la figura 6 recoge una prueba de imagen craneal y sus hallazgos; el recibo bancario de la figura 7 contenía, antes de su anonimización, el nombre del ordenante, su IBAN y fragmentos de su domicilio. La figura 8 corresponde a una resolución de la Seguridad Social sobre el derecho a asistencia sanitaria.
 
-&#91;image: Informe de resonancia magnética craneal con los hallazgos tachados\]
-
-*Figura 6. Informe clínico localizado en la biblioteca de archivos de una cuenta compartida.*
-
-&#91;image: Recibo bancario con los datos del ordenante tachados\]
-
-*Figura 7. Documento bancario. Se han tachado ordenante, emisor, identificadores, IBAN y domicilio.*
-
-&#91;image: Resolución de la Seguridad Social con datos personales tachados\]
-
-*Figura 8. Resolución administrativa sobre asistencia sanitaria. Se han tachado los datos personales, la dirección provincial y la fecha.*
-
 Las imágenes de espacios privados y personales completan el perfil de los usuarios. Muestran interiores de viviendas, dormitorios, compras en curso, aplicaciones bancarias y formularios de registro con credenciales (figuras 9 y 10).
-
-&#91;image: Fotografía del interior de una vivienda\]
-
-*Figura 9. Fotografía del interior de una vivienda almacenada en una cuenta compartida.*
-
-&#91;image: Mosaico de imágenes almacenadas en una cuenta compartida, con datos identificativos tachados\]
-
-*Figura 10. Mosaico de imágenes de la biblioteca de una cuenta compartida: compras, formularios de registro, comunicaciones escolares, aplicaciones bancarias, correo electrónico, espacios privados e imágenes generadas. Se han tachado rostros, nombres, perfiles, dominios y datos de contacto.*
 
 ### 4.6. La exposición se intensifica tras la baja
 
@@ -426,3 +386,83 @@ Fuentes en línea consultadas por última vez el 1 de octubre de 2026.
 - STJUE de 29 de julio de 2019, *Fashion ID*, C-40/17, ECLI:EU:C:2019:629. [Enlace](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:62017CJ0040)
 - STJUE de 14 de diciembre de 2023, *Natsionalna agentsia za prihodite*, C-340/21, ECLI:EU:C:2023:986. [Enlace](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:62021CJ0340)
 - Tribunale di Roma, sentencia n.º 4785, de 18 de marzo de 2026 (citada a través de Diritto.it, 2026).
+
+## Apéndice: Figuras
+
+### Figura 1. Ciclo de vida de una cuenta revendida
+
+![Figura 1. Ciclo de vida de una cuenta revendida](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-1.png)
+
+*Figura 1. Ciclo de vida de una cuenta revendida. El intermediario conserva el acceso en todo momento y cada nuevo comprador hereda el contenido de los anteriores. Elaboración propia.*
+
+---
+
+### Figura 2. Catálogo de una plataforma de reventa de suscripciones
+
+![Figura 2. Catálogo de una plataforma de reventa de suscripciones](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-2.jpeg)
+
+*Figura 2. Catálogo de una plataforma de reventa de suscripciones. El nombre de la plataforma se ha tachado.*
+
+---
+
+### Figura 3. Entrega automatizada de credenciales y código de verificación
+
+![Figura 3. Entrega automatizada de credenciales y código de verificación](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-3.jpeg)
+
+*Figura 3. Entrega automatizada de credenciales, código de segundo factor y código de verificación por correo. Los valores se han tachado.*
+
+---
+
+### Figura 4. Panel de almacenamiento
+
+![Figura 4. Panel de almacenamiento](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-4.jpeg)
+
+*Figura 4. Panel de almacenamiento de una de las cuentas compartidas analizadas.*
+
+---
+
+### Figura 5. Títulos de conversaciones recientes
+
+![Figura 5. Barra lateral con títulos de conversaciones recientes](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-5.jpeg)
+
+*Figura 5. Títulos de conversaciones recientes de una cuenta compartida, truncados por los autores.*
+
+---
+
+### Figura 6. Informe clínico localizado en la biblioteca de archivos
+
+![Figura 6. Informe clínico localizado en la biblioteca de archivos](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-6.jpeg)
+
+*Figura 6. Informe clínico localizado en la biblioteca de archivos de una cuenta compartida.*
+
+---
+
+### Figura 7. Documento bancario
+
+![Figura 7. Documento bancario anonimizado](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-7.jpeg)
+
+*Figura 7. Documento bancario. Se han tachado ordenante, emisor, identificadores, IBAN y domicilio.*
+
+---
+
+### Figura 8. Resolución administrativa sobre asistencia sanitaria
+
+![Figura 8. Resolución administrativa sobre asistencia sanitaria](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-8.jpeg)
+
+*Figura 8. Resolución administrativa sobre asistencia sanitaria. Se han tachado los datos personales, la dirección provincial y la fecha.*
+
+---
+
+### Figura 9. Fotografía del interior de una vivienda
+
+![Figura 9. Fotografía del interior de una vivienda](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-9.jpeg)
+
+*Figura 9. Fotografía del interior de una vivienda almacenada en una cuenta compartida.*
+
+---
+
+### Figura 10. Mosaico de imágenes de la biblioteca de una cuenta compartida
+
+![Figura 10. Mosaico de imágenes de la biblioteca de una cuenta compartida](images/Suscripciones%20compartidas%20de%20IA%20generativa%20como%20vector%20de%20exposici%C3%B3n%20de%20datos%20personales/figura-10.jpeg)
+
+*Figura 10. Mosaico de imágenes de la biblioteca de una cuenta compartida: compras, formularios de registro, comunicaciones escolares, aplicaciones bancarias, correo electrónico, espacios privados e imágenes generadas. Se han tachado rostros, nombres, perfiles, dominios y datos de contacto.*
